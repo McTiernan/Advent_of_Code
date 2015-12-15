@@ -31,7 +31,6 @@ public class day4 {
                 result = toHex(theDigest);
                 char[] charArray = result.toCharArray();
                 for (int i=0; i < zeros; i++ ) {
-                    //System.out.println("charArray = " + charArray[i]);
                     if (charArray[i] == '0') {
                         count++;
                         if (count == zeros && charArray[zeros] != 0) {
@@ -41,7 +40,6 @@ public class day4 {
                     }
                 }
                 count = 0;
-                //System.out.println("set = " + set);
                 if(set)break;
                 number++;
             }
