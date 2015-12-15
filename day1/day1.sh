@@ -6,6 +6,7 @@ Floor=0
  
 # Make sure file exits else die 
 [ ! -f $INPUT ] && { echo "$0: file $INPUT not found."; exit 2; }
+
 while IFS= read -r -n1 c 
 do
 	if [[ "$c" == "(" ]]; then 
