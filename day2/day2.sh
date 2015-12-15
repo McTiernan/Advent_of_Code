@@ -5,6 +5,7 @@ Total=0
 smallVar1=0
 smallVar2=0
 SmallestArea=0
+Ribbon=0
 
 [ $# -eq 0 ] && { echo "Usage : $0 filename"; exit 1; }
  
@@ -28,7 +29,9 @@ do
 	fi
 
 	SmallestArea=$(( smallVar2 * smallVar1 ))
+	Ribbon=$(( Ribbon + ( ( smallVar2 * 2 ) + ( smallVar1 * 2 ) + ( l * w * h ) )))
 	Total=$(( Total + ( 2 * ( l * w ) + 2 * ( w * h ) + 2 * ( h * l ) + SmallestArea )  ))
 
 done < "$INPUT"
 echo "We need $Total feet of wrapping paper"
+echo "We need $Ribbon feet of Ribbon"
